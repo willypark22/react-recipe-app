@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Recipe from './Recipe.js';
 import './App.css';
 import uuid from 'react-uuid';
+import Navbar from './components/Navbar.js';
 
 const App = () => {
 
@@ -41,12 +42,11 @@ const App = () => {
 
   return (
     <div className="App">
-      <form onSubmit={getSearch} className="search-form">
-        <input className="search-bar" type="text" value={search} onChange={updateSearch} />
-        <button className="search-button" type="submit">
-          Search
-        </button>
-      </form>
+      <Navbar 
+        getSearch={getSearch}
+        search={search}
+        updateSearch={updateSearch}
+      />
       <div className="recipes">
         {recipes.map(recipe => (
           <Recipe 

@@ -1,30 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@font-face {
+  font-family: 'PlasticLove';
+  src: url('./fonts/PlasticLoveRegular-MVO9v.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%); */
+  background-color: #ffffff;
+}
+
 .App {
   min-height: 100vh;
-  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 }
 
 .search-form {
-  min-height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 50%;
+  margin-left: 30px;
 }
 
 .search-bar {
   width: 50%;
-  border: none;
+  border: 1px solid black;
+  border-radius: 10px 0px 0px 10px;
   padding: 10px;
+  outline: none;
 }
 
 .search-button {
   background: lightcoral;
-  border: none;
+  border: 1px solid black;
+  border-radius: 0px 10px 10px 0px;
   padding: 10px 20px;
   color: white;
+  outline: none;
 }
 
 .recipes {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  margin: auto;
+  width: 900px;
+  margin-top: 80px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.recipe-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: 10px 0;
+}
+
+.recipe-navbar p {
+  font-family: 'PlasticLove';
+  font-size: 30px;
+  margin-top: 10px;
+  color: #000;
+}
+
+.modal {
+  font-size: 12px;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.content-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.content-column-40 {
+  flex: 40%;
+}
+
+.content-column-60 {
+  flex: 60%;
+}
+
+.content {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.modal > .header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
+.modal > .content {
+  width: 100%;
+  padding: 10px 5px;
+}
+.modal > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+.content-header > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: 10px;
+  /* top: -10px; */
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
 }

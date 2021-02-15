@@ -1,13 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 .recipe {
+    position: relative;
     border-radius: 10px;
     box-shadow: 0px 5px 20px rgba(71, 71, 71);
-    margin: 20px;
+    /* padding: 20px; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     background: #fff;
     align-items: center;
-    min-width: 40%;
+    width: 400px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px -65px 60px -50px black inset;
+    cursor: pointer;
+}
+
+.recipe h1 {
+    position: absolute;
+    font-family: 'Roboto';
+    font-size: 18px;
+    color: #ffffff;
+    bottom: 0;
+    margin-bottom: 10px;
 }
 
 .image {
