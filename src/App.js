@@ -3,6 +3,7 @@ import Recipe from './Recipe.js';
 import './App.css';
 import uuid from 'react-uuid';
 import Navbar from './components/Navbar.js';
+import Modal from 'react-bootstrap/Modal';
 
 const App = () => {
 
