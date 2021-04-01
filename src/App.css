@@ -11,8 +11,11 @@
 }
 
 body {
-  /* background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%); */
   background-color: #ffffff;
+}
+
+ul {
+  list-style: none;
 }
 
 .App {
@@ -87,6 +90,12 @@ body {
 
 .content-column-50 {
   flex: 50%;
+}
+
+.column-border {
+  border: 1px solid black;
+  margin-left: 5px;
+  padding: 5px;
 }
 
 .content-column-60 h2 {

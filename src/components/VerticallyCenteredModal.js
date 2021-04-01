@@ -3,7 +3,8 @@ import Modal from 'react-bootstrap/Modal';
 import uuid from 'react-uuid';
 import Button from 'react-bootstrap/Button';
 
-const VerticallyCenteredModal = ({ title, calories, image, ingredients, show, onHide}) => {
+const VerticallyCenteredModal = ({ title, calories, image, ingredients, nutrition, show, servings, onHide}) => {
+    const filteredNutrition = [ 'Fat', 'Carbs', 'Protein', 'Cholesterol', 'Sodium', 'Calcium' ]
     return(
         <div onClick={e => e.stopPropagation()}>
             <Modal
@@ -25,15 +26,18 @@ const VerticallyCenteredModal = ({ title, calories, image, ingredients, show, on
                             <img src={image} width="100%" alt={title}></img>
                         </div>
                         <div className="content-column-50">
-
+                            <div className="column-border">
+                                <p>Servings: {servings}</p>
+                                <p>Calories: {Math.round(calories)}</p>
+                            </div>
                         </div>
                     </div>
-                    <h4>Centered Modal</h4>
-                    <p>
-                    Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-                    dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-                    consectetur ac, vestibulum at eros.
-                    </p>
+                    <h4>Ingredients</h4>
+                    <ul>
+                        {ingredients.map(ingredient => (
+                            <li key={uuid()}>{ingredient.text}</li>
+                        ))}
+                    </ul>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button onClick={onHide}>Close</Button>

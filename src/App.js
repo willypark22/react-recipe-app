@@ -18,7 +18,7 @@ const App = () => {
     getRecipes();
   }, [query]);
 
-  // This will send a reuest everytime the user inputs a letter
+  // This will send a request everytime the user inputs a letter
   // useEffect( () => {
   //   getRecipes();
   // }, [search]);
@@ -39,8 +39,6 @@ const App = () => {
     setSearch("");
   }
 
-  console.log(recipes);
-
   return (
     <div className="App">
       <Navbar 
@@ -56,6 +54,8 @@ const App = () => {
             calories={recipe.recipe.calories}
             image={recipe.recipe.image}
             ingredients={recipe.recipe.ingredients}
+            nutrition={recipe.recipe.digest}
+            servings={recipe.recipe.yield}
           />
         ))}
       </div>
