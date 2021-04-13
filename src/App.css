@@ -70,7 +70,7 @@ ul {
 .recipe-navbar p {
   font-family: 'PlasticLove';
   font-size: 30px;
-  margin-top: 10px;
+  /* padding-top: 20px; */
   color: #000;
 }
 
